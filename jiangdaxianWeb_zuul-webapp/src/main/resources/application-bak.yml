@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: jiangdaxian-gateway-zuul
+  profiles: dev
+server:
+  port: 8050
+zuul:
+  routes:
+    api-1:
+      path: /kafka/**
+      url: http://127.0.0.1:27111/kafka/
+    api-2:
+      path: /throwError/**
+      url: http://127.0.0.1:27112/throwError/

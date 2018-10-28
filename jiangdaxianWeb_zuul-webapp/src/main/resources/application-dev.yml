@@ -15,9 +15,9 @@ zuul:
   routes:
     test4:
       path: /test4/**
-      stripPrefix: false;
+      stripPrefix: false
       serviceId: jiangdaxian-gateway-zuul_test_4
     test5:
       path: /test5/**
-      stripPrefix: false;
+      stripPrefix: false
       serviceId: jiangdaxian-gateway-zuul_test_5

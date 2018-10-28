@@ -6,17 +6,16 @@ server:
   port: 8050
 eureka:
   instance:
-    prefer-ip-address: true
+    appname: jiangdaxian-gateway-zuul
+    prefer-ip-address: false
   client:
     serviceUrl:
-      default-zone: http://discovery1:8761/eureka/,http://discovery2:8762/eureka/, http://discovery3:8763/eureka/
-    fetch-registry: true
-    register-with-eureka: true
+      defaultZone: http://dis1:8761/eureka/,http://dis2:8761/eureka/,http://dis3:8761/eureka/
 zuul:
   routes:
-    api-1:
-      path: /properties/**
-      serviceId: jiangdaxian-gateway-zuul_test
-    api-2:
-      path: /properties1/**
-      serviceId: jiangdaxian-gateway-zuul_test
+    apiTest4:
+      path: /test4/**
+      serviceId: jiangdaxian-gateway-zuul_test_4
+    apiTest5:
+      path: /test5/**
+      serviceId: jiangdaxian-gateway-zuul_test_5

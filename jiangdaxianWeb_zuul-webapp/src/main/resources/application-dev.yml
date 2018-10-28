@@ -13,9 +13,11 @@ eureka:
       defaultZone: http://dis1:8761/eureka/,http://dis2:8761/eureka/,http://dis3:8761/eureka/
 zuul:
   routes:
-    apiTest4:
+    test4:
       path: /test4/**
+      stripPrefix: false;
       serviceId: jiangdaxian-gateway-zuul_test_4
-    apiTest5:
+    test5:
       path: /test5/**
+      stripPrefix: false;
       serviceId: jiangdaxian-gateway-zuul_test_5

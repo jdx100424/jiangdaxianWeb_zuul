@@ -8,6 +8,7 @@ eureka:
   instance:
     appname: jiangdaxian-gateway-zuul
     prefer-ip-address: false
+    hostname: ${hostname}
   client:
     serviceUrl:
       defaultZone: http://dis1:8761/eureka/,http://dis2:8761/eureka/,http://dis3:8761/eureka/

@@ -3,7 +3,7 @@ spring:
     name: jiangdaxian-gateway-zuul
   profiles: dev
 server:
-  port: 8050
+  port: 3454
 eureka:
   instance:
     appname: jiangdaxian-gateway-zuul

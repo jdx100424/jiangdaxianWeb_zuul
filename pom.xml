@@ -20,11 +20,12 @@
 	</properties>
 
 	<dependencies>
+		<!--
 		<dependency>
             <groupId>jiangdaxian_component_web</groupId>
             <artifactId>jiangdaxian_component_web</artifactId>
             <version>1.0.0-SNAPSHOT</version>
-        </dependency>		
+        </dependency>-->	
 		<dependency>
 		    <groupId>org.springframework.cloud</groupId>
 		    <artifactId>spring-cloud-starter-eureka</artifactId>

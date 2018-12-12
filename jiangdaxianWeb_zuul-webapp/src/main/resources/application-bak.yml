@@ -1,9 +1,9 @@
 spring:
   application:
     name: jiangdaxian-gateway-zuul
-  profiles: dev
+  profiles: bak
 server:
-  port: 8050
+  port: 8051
 zuul:
   routes:
     api-1:
@@ -12,3 +12,6 @@ zuul:
     api-2:
       path: /throwError/**
       url: http://127.0.0.1:27112/throwError/
+    api-3:
+      path: /cloud-study-1/**
+      url: http://127.0.0.1:9801/cloud-study-1

@@ -1,5 +1,11 @@
 package com.jiangdaxian.simple.zuulfilter;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.UUID;
+
 import javax.servlet.http.HttpServletRequest;
 
 import org.slf4j.Logger;
@@ -19,7 +25,18 @@ public class SimpleFilter extends ZuulFilter {
 		HttpServletRequest request = ctx.getRequest();
 
 		LOG.info("send {} request to {}", request.getMethod(), request.getRequestURL().toString());
+		
+		request.getParameterMap();
+        Map<String, List<String>> requestQueryParams = ctx.getRequestQueryParams();
+        if (requestQueryParams == null) {
+            requestQueryParams = new HashMap<>();
+        }
+        List<String> arrayList = new ArrayList<>();
+        arrayList.add(UUID.randomUUID().toString());
+        requestQueryParams.put("requestUniqueId", arrayList);
+        ctx.setRequestQueryParams(requestQueryParams);
 
+		
 		Object accessToken = request.getParameter("accessToken");
 		if (accessToken == null) {
 			LOG.warn("access token is empty");
